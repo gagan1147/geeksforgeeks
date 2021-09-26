@@ -7,8 +7,6 @@ void add_edge(vector<int> adj[],int u,int v){
     adj[u].push_back(v);
 }
 
-
-
 void bfs(vector<int> adj[],int v){
     
     int in_degree[v] = {0};

@@ -14,7 +14,6 @@ struct tree{
     }
 };
 
-//hekkvdnhvf
 
 struct tree *insert(struct tree* root,int x){
     if (!root){
