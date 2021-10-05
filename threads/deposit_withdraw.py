@@ -1,23 +1,23 @@
-
-
-
 import threading
 import time
-deposit = 100
 
+deposit = 100
 lock = threading.Lock()
-def add_profit()->None:
+
+def add_profit() -> None:
     global deposit
     for i in range(1000000):
         lock.acquire()
         deposit = deposit + 10
         lock.release()
-def withdraw()->None:
+
+def withdraw() -> None:
     global deposit
     for i in range(1000000):
         lock.acquire()
         deposit = deposit - 10
         lock.release()
+
 
 task1 = threading.Thread(target=add_profit)
 
@@ -31,4 +31,3 @@ task1.join()
 task2.join()
 
 print(deposit)
-
